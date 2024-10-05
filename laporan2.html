@@ -31,11 +31,13 @@
             color: #00aaff;
             margin-bottom: 20px;
         }
-        p {
+        p, ul {
             text-align: justify;
             color: #c9d1d9;
             line-height: 1.6;
+            margin-left: 0;
         }
+
         /* Author and Info Section */
         .author, .info {
             text-align: center;
@@ -95,6 +97,25 @@
             text-align: center;
         }
 
+        /* Button Styles */
+        .link-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .back-button {
+            background-color: #00aaff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .back-button:hover {
+            background-color: #0077cc;
+        }
+
         /* Footer */
         .footer {
             text-align: center;
@@ -120,9 +141,9 @@
     <div class="container">
         <h1>LAPORAN II PRAKTIKUM SISTEM PARALEL DAN TERDISTRIBUSI</h1>
         
-        <h2>Konfigurasi IP Address</h2>
+        <h2>KONFIGURASI IP ADDRESS</h2>
 
-        <h3 class="section-title">1. IP Address</h3>
+        <h3 class="section-title">IP Address</h3>
         <p>IP Address (Internet Protocol Address) adalah sebuah alamat unik yang digunakan untuk mengidentifikasi perangkat dalam jaringan komputer atau internet. Setiap perangkat yang terhubung ke internet memiliki IP Address agar dapat saling berkomunikasi dan bertukar data.</p>
 
         <h4>Jenis-Jenis IP Address</h4>
@@ -165,20 +186,20 @@
             </tr>
         </table>
 
-        <h3 class="section-title">2. Konfigurasi IP Address Melalui Winbox</h3>
+        <h3 class="section-title">Konfigurasi IP Address Melalui Winbox</h3>
         <p>Berikut adalah langkah-langkah untuk mengonfigurasi IP Address melalui Winbox:</p>
         <ul>
-            <li>1. Nyalakan MikroTik dengan menancapkan kabel power ke sumber listrik.</li>
-            <li>2. Sambungkan kabel LAN (Rj45) ke Ether1 (untuk internet dari ISP) dan Ether2 (ke PC/Laptop).</li>
-            <li>3. Buka aplikasi Winbox dan akses menu <strong>IP &gt; Address</strong>.</li>
-            <li>4. Masukkan IP Address sesuai kebutuhan dan arahkan pada interface yang ingin dikonfigurasi.</li>
-            <li>5. Klik <strong>Apply &gt; OK</strong> untuk menyimpan konfigurasi.</li>
+            <li>Nyalakan MikroTik dengan menancapkan kabel power ke sumber listrik.</li>
+            <li>Sambungkan kabel LAN (Rj45) ke Ether1 (untuk internet dari ISP) dan Ether2 (ke PC/Laptop).</li>
+            <li>Buka aplikasi Winbox dan akses menu <strong>IP &gt; Address</strong>.</li>
+            <li>Masukkan IP Address sesuai kebutuhan dan arahkan pada interface yang ingin dikonfigurasi.</li>
+            <li>Klik <strong>Apply &gt; OK</strong> untuk menyimpan konfigurasi.</li>
         </ul>
 
-        <div class="footer">
-            <p>© 2024 Universitas Syiah Kuala</p>
+        <!-- Tombol Back -->
+        <div class="link-section">
+            <a href="laporan.html" class="back-button">Back</a>
         </div>
-    </div>
-
+        
 </body>
 </html>
