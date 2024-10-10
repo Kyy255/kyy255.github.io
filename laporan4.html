@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Laporan IV Praktikum Sistem Paralel dan Terdistribusi</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #00aaff;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #00aaff;
+            border-bottom: 2px solid #00aaff;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: #00aaff;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        p, ul {
+            text-align: left;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+
+        /* Section Titles */
+        .section-title {
+            margin-top: 40px;
+            font-size: 22px;
+            color: #00aaff;
+            text-transform: uppercase;
+            border-bottom: 2px solid #00aaff;
+            padding-bottom: 5px;
+            text-align: left;
+        }
+
+        /* Lists */
+        ul {
+            margin: 10px 0;
+            padding: 0 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+            list-style-type: square;
+            color: #c9d1d9;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 12px;
+            color: #8b949e;
+            background-color: #161b22;
+            padding: 10px 0;
+        }
+
+        /* Button */
+        .button-back {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #00aaff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .button-back:hover {
+            background-color: #008ecc;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: 30px auto;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Laporan IV</h1>
+        <h2>Quiz Tentang Mikrotik dan Konfigurasi</h2>
+
+        <h3 class="section-title">1. Darimana berasalnya Mikrotik?</h3>
+        <p>MikroTik adalah perusahaan asal Latvia yang didirikan pada tahun 1996 oleh John Tully dan Arnis Riekstiņš. Pada awalnya, perusahaan ini berfokus pada pengembangan perangkat lunak router berbasis Linux untuk penyedia layanan internet (ISP) yang menyediakan akses internet nirkabel. Setelah itu, mereka juga mengembangkan perangkat keras router yang dikenal dengan nama “RouterBOARD.”</p>
+        <p>MikroTik dikenal luas karena menawarkan solusi jaringan yang terjangkau namun dilengkapi dengan banyak fitur. Produk-produk mereka, seperti RouterOS dan RouterBOARD, digunakan secara global oleh ISP, perusahaan, dan pengguna tingkat lanjut berkat fleksibilitas, kemudahan penggunaan, serta dukungan untuk berbagai teknologi jaringan.</p>
+
+        <h3 class="section-title">2. Tipe Router Mikrotik pada Lab?</h3>
+        <p>MikroTik RB931-2nD (hAP mini) adalah router kecil yang dirancang untuk penggunaan rumah atau kantor kecil. Dengan dukungan Wi-Fi 2.4 GHz hingga 300 Mbps dan 3 port Ethernet (10/100 Mbps), router ini ideal untuk kebutuhan jaringan dasar. Dilengkapi dengan MikroTik RouterOS Level 4, perangkat ini menawarkan fitur canggih seperti firewall dan manajemen bandwidth. Meskipun kecil dan memiliki konsumsi daya rendah, RB931-2nD mampu memberikan performa handal untuk jaringan sederhana.</p>
+
+        <h3 class="section-title">3. Parameter apa saja pada winbox?</h3>
+        <p>Winbox menyediakan berbagai parameter untuk mengelola perangkat MikroTik, meliputi:</p>
+        <ul>
+            <li>Interface: Mengonfigurasi Ethernet, Wireless, Bridge, dan VLAN.</li>
+            <li>IP: Pengaturan alamat IP, DHCP, firewall, routing, dan DNS.</li>
+            <li>Bridge: Mengelola bridging dan pengaturan STP/RSTP.</li>
+            <li>Routing: Konfigurasi rute statis dan protokol routing dinamis (OSPF, BGP, RIP).</li>
+            <li>Queues: Manajemen bandwidth dengan Simple Queue dan Queue Tree.</li>
+            <li>System: Mengelola pengguna, waktu, reboot, upgrade firmware, dan scripting.</li>
+            <li>Tools: Alat uji seperti ping, traceroute, bandwidth test, dan packet sniffer.</li>
+            <li>PPP: Konfigurasi VPN (PPTP, L2TP, OpenVPN).</li>
+            <li>Firewall: Aturan filter, NAT, dan mangle.</li>
+            <li>Monitor: Memantau lalu lintas dan penggunaan CPU/memori.</li>
+            <li>Files: Backup, export, dan import konfigurasi.</li>
+        </ul>
+
+        <h3 class="section-title">4. Fitur Menu pada winbox apa saja?</h3>
+        <p>Berikut adalah fitur-fitur utama menu yang tersedia di Winbox, alat konfigurasi grafis MikroTik untuk RouterOS:</p>
+        <ul>
+            <li>Neighbors: Menampilkan perangkat MikroTik yang terdeteksi di jaringan, memungkinkan pengguna terhubung ke perangkat tersebut.</li>
+            <li>Interfaces: Menampilkan dan mengelola interface (Ethernet, wireless, VLAN, bridge) pada router.</li>
+            <li>Wireless: Konfigurasi interface wireless, termasuk mode operasi, frekuensi, keamanan, dan lainnya.</li>
+            <li>Bridge: Mengelola bridge untuk menggabungkan beberapa interface menjadi satu jaringan logis dan pengaturan Spanning Tree Protocol (STP).</li>
+            <li>IP: Addresses, DHCP Client/Server, Firewall, DNS, Routes, ARP.</li>
+            <li>Queues: Simple Queue dan Queue Tree untuk manajemen bandwidth.</li>
+            <li>Routing: Static Routes, Dynamic Routing (OSPF, BGP, RIP).</li>
+            <li>System: Users, Clock, Scheduler, Reboot/Shutdown, Scripts, Routerboard.</li>
+            <li>Tools: Ping, Traceroute, Bandwidth Test, Packet Sniffer, Netwatch, Profile.</li>
+            <li>Files: Mengelola file dalam router (backup, export, import).</li>
+            <li>Logs: Menampilkan log aktivitas perangkat.</li>
+            <li>Monitor: Traffic, CPU/Memory Usage, Packages.</li>
+        </ul>
+
+        <h3 class="section-title">5. Macam - Macam Konfigurasi Mikrotik?</h3>
+        <p>Berikut adalah beberapa konfigurasi dasar yang bisa dilakukan pada perangkat MikroTik:</p>
+        <ul>
+            <li>Konfigurasi Dasar (Basic Setup): IP Address Assignment, NAT, DHCP Server, DNS Server, Firewall.</li>
+            <li>Konfigurasi Wireless: Wireless Access Point (AP), Wireless Client, Wireless Security.</li>
+            <li>Konfigurasi Routing: Static Routing, Dynamic Routing (OSPF, BGP, RIP).</li>
+        </ul>
+
+        <div style="text-align: center;">
+            <a href="laporan.html" class="button-back">Back</a>
+        </div>
+
+    </div>
+    
+
+</body>
+</html>
