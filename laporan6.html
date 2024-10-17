@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Laporan 6 - NAT di Bridge VS NAT di Firewall dan AP Bridge VS Bridge</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #00aaff;
+            margin-bottom: 20px;
+        }
+        h2, h3 {
+            text-align: left;
+            color: #00aaff;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            margin-bottom: 10px;
+        }
+        p, ul {
+            text-align: justify;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+            list-style-type: square;
+            color: #c9d1d9;
+        }
+
+        /* Button Styles */
+        .link-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .back-button {
+            background-color: #00aaff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .back-button:hover {
+            background-color: #0077cc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Laporan 6 - NAT di Bridge VS NAT di Firewall dan AP Bridge VS Bridge</h1>
+
+        <h2>NAT di Menu Bridge VS NAT di Menu Firewall</h2>
+
+        <p>Di Winbox, ada dua tempat utama untuk mengkonfigurasi NAT (Network Address Translation), yaitu di menu Bridge dan di menu Firewall. Meskipun keduanya terkait dengan pengelolaan lalu lintas jaringan, mereka memiliki peran yang berbeda. Berikut adalah perbedaan utama antara NAT di menu Bridge dan NAT di menu Firewall:</p>
+
+        <ul>
+            <li><strong>1. NAT di Menu Bridge</strong>
+                <ul>
+                    <li>NAT di Bridge digunakan dalam skenario jaringan layer 2 bridging atau sebagai jembatan antara dua atau lebih interface jaringan.</li>
+                    <li>Contoh penggunaan: Menghubungkan beberapa jaringan fisik menjadi satu jaringan virtual tanpa konfigurasi subnet baru.</li>
+                    <li>Operasi NAT pada Bridge bekerja pada layer 2 (Data Link Layer) dari model OSI.</li>
+                    <li>Digunakan untuk translasi IP antar interface yang terhubung melalui bridge.</li>
+                </ul>
+            </li>
+
+            <li><strong>2. NAT di Menu Firewall</strong>
+                <ul>
+                    <li>NAT di Firewall beroperasi pada layer 3 (Network Layer), yang memungkinkan pengaturan translasi alamat IP pada level yang lebih tinggi.</li>
+                    <li>Contoh penggunaan: Source NAT (SNAT), Destination NAT (DNAT), dan Masquerading digunakan untuk mengelola lalu lintas jaringan internal dan eksternal.</li>
+                    <li>NAT di Firewall mengelola lalu lintas paket IP dengan lebih fleksibel dan granular.</li>
+                    <li>Penggunaan umum: Port forwarding, sharing koneksi internet, dan akses sumber daya internal dari luar jaringan.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>AP Bridge VS Bridge</h2>
+
+        <ul>
+            <li><strong>1. AP Bridge</strong>
+                <ul>
+                    <li>Mode AP Bridge memungkinkan perangkat berfungsi sebagai Access Point yang melayani beberapa klien nirkabel.</li>
+                    <li>AP Bridge mendukung banyak koneksi klien secara bersamaan, ideal untuk jaringan dengan beberapa perangkat terhubung.</li>
+                    <li>Contoh penggunaan: Router nirkabel yang menyediakan koneksi internet atau jaringan lokal ke banyak perangkat.</li>
+                </ul>
+            </li>
+
+            <li><strong>2. Bridge</strong>
+                <ul>
+                    <li>Bridge memungkinkan perangkat jaringan menghubungkan antarmuka jaringan menjadi satu kesatuan tanpa NAT atau routing.</li>
+                    <li>Mode Bridge menggabungkan segmen jaringan menjadi satu jaringan yang terintegrasi.</li>
+                    <li>Contoh penggunaan: Menggabungkan jaringan nirkabel dengan kabel, tetapi hanya untuk satu koneksi perangkat.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Kesimpulan</h3>
+        <p>NAT di Firewall memberikan kontrol dan fungsionalitas lebih komprehensif, terutama dalam pengelolaan lalu lintas antara jaringan internal dan eksternal. Sedangkan, NAT di Bridge lebih fokus pada translasi alamat IP dalam konteks bridging. Mode AP Bridge memungkinkan perangkat melayani banyak klien, sementara mode Bridge lebih sederhana dan cocok untuk koneksi tunggal antar perangkat jaringan.</p>
+
+        <!-- Tombol Back -->
+        <div class="link-section">
+            <a href="laporan.html" class="back-button">Back</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
